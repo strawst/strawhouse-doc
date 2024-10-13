@@ -1,0 +1,2 @@
+# strawhouse-doc
+Strawhouse documentation

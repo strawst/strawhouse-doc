@@ -1,4 +1,4 @@
-# Client Reference
+# Client SDK Reference
 
 Client provides a set of functions to interact with the backend server using gRPC-backed API.
 

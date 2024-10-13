@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# Configuration
+# Backend Configuration
 
 Strawhouse backend is configured using a YAML file or environment variables. The configuration file can be used by
 specifying the path using the `--config` flag, which recommends using path `/etc/strawhouse/backend/config.yaml`. If the

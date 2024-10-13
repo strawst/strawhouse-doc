@@ -8,6 +8,10 @@ dist/
 dist-ssr/
 *.local
 
+# Vitepress
+/docs/.vitepress/*
+!/docs/.vitepress/config.ts
+
 # Editor
 .vscode/
 .idea/

@@ -1,4 +1,4 @@
-# Signature Reference
+# Signature SDK Reference
 
 Signature is a SDK for signing and verifying tokens. The token mechanism is stateless, so all functions is performed
 locally based on provided key.

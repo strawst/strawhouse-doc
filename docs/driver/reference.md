@@ -1,4 +1,4 @@
-# Reference
+# Driver SDK Reference
 
 Driver featured both stateless signature signing / verification and client API communication. The list of functions provided by the driver are as follows:
 

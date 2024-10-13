@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# Installation
+# Backend Installation
 
 Strawhouse backend can be installed in two ways: standalone and Docker. Standalone installation is recommended for production use, while Docker is recommended for development and testing.
 

@@ -47,7 +47,7 @@ The address to listen for gRPC server. The value should is in same format as [We
 - YAML key: `dataRoot`
 - Environment variable: `STRAWHOUSE_DATA_ROOT`
 
-Root directory to store data files. The directory should be writable by the backend process and in the inode-supported
+Root directory to store data files. The directory should be writable by the backend process and in the xattr-supported
 file system.
 
 ### Pogreb Path

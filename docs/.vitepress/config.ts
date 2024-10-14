@@ -7,7 +7,10 @@ export default defineConfig({
 	themeConfig: {
 		nav: [
 			{ text: 'Home', link: '/' },
-			{ text: 'Backend', link: '/backend/' },
+			{ text: 'Documentation', link: '/backend/' },
+		],
+		socialLinks: [
+			{ icon: 'github', link: 'https://github.com/strawstacks' },
 		],
 		sidebar: [
 			{
@@ -40,8 +43,8 @@ export default defineConfig({
 				],
 			},
 		],
-		socialLinks: [
-			{ icon: 'github', link: 'https://github.com/strawstacks' },
-		],
+		search: {
+			provider: 'local'
+		}
 	},
 })

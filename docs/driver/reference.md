@@ -20,7 +20,7 @@ Initialize the driver with the backend server URL.
 package main
 
 import (
-    "github.com/strawstacks/strawhouse/strawhouse-go"
+    "github.com/strawstacks/strawhouse-go"
 )
 
 func main() {

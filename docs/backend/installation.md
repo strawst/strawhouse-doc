@@ -13,7 +13,7 @@ Standalone installation is the recommended way to install the backend, also for 
 **Requirements**
 
 - Linux, macOS, or UNIX-like system
-- Data file system with inode-supported (ext4, zfs, xfs, btrfs, apfs, etc.)
+- Data file system with xattr-supported (ext4, zfs, xfs, btrfs, apfs, etc.)
 
 ### Using pre-built binary
 

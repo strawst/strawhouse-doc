@@ -6,8 +6,8 @@ API primarily used to interact with the server from the client side, all interac
 
 Download a file in the server
 
-- **Endpoint**: `/:filepath`
 - **Method**: `GET`
+- **Endpoint**: `/:filepath`
 
 **Query parameters**
 
@@ -25,8 +25,8 @@ curl -X GET http://localhost:3000/path/to/file.txt?t=AcMAZw6af43PAkG8I39DSYL3GKQ
 
 Upload a file to the server
 
-- **Endpoint**: `/_/upload`
 - **Method**: `POST`
+- **Endpoint**: `/_/upload`
 - **Content-Type**: `multipart/form-data`
 
 **Form data**
@@ -42,7 +42,7 @@ Upload a file to the server
 ```sh
 curl -X POST \
     -F "token=AcMAZw6af43PAkG8I39DSYL3GKQHnGbK7nWfI6lD" \
-    -F "destination=/path/to/store/" \
+    -F "directory=/path/to/store/" \
     -F "file=@/home/user/cat.png" \
     http://localhost:3000/_/upload
 ```

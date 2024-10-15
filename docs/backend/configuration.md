@@ -8,15 +8,28 @@ Strawhouse backend is configured using a YAML file or environment variables. The
 specifying the path using the `--config` flag, which recommends using path `/etc/strawhouse/backend/config.yaml`. If the
 flag is not specified, backend will fallback to environment variables.
 
-## Example configuration file
+## Example configuration
 
-```yaml
+::: code-group
+
+```yaml [config.yaml]
 webListen: [ "tcp", ":3000" ]
 protoListen: [ "tcp", ":3001" ]
 dataRoot: /var/lib/strawhouse/data/
 pogrebPath: /var/lib/strawhouse/pogreb/
 key: a1b2c3d4e5f6g7h8i9j0
 ```
+
+```sh [.env]
+STRAWHOUSE_WEB_LISTEN=tcp,:3000
+STRAWHOUSE_PROTO_LISTEN=tcp,:3001
+STRAWHOUSE_DATA_ROOT=/var/lib/strawhouse/data/
+STRAWHOUSE_POGREB_PATH=/var/lib/strawhouse/pogreb/
+STRAWHOUSE_KEY=a1b2c3d4e5f6g7h8i9j0
+
+```
+
+:::
 
 ## Configuration options
 

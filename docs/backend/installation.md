@@ -19,7 +19,7 @@ Standalone installation is the recommended way to install the backend, also for 
 
 1. Download the latest release from [GitHub Releases](https://github.com/strawstacks/strawhouse/releases) or using the following command:
     ```shell
-    sudo wget -O /usr/local/bin/strawhousebackd https://github.com/strawstacks/strawhouse/releases/download/v0.1.0/strawhousebackd_linux_arm64
+    sudo wget -O /usr/local/bin/strawhousebackd https://github.com/strawstacks/strawhouse/releases/download/v0.1.0/strawhousebackd_linux_amd64
     ```
     > Please replace command with latest release version and matching architecture.
 2. Change the permission to executable:
@@ -64,7 +64,7 @@ Standalone installation is the recommended way to install the backend, also for 
 3. Build protobuf and backend:
     ```shell
     make protoc
-    env GOOS=linux GOARCH=arm64 go build -o .local/strawhousebackd ./backend
+    env GOOS=linux GOARCH=amd64 go build -o .local/strawhousebackd ./backend
     ```
    
 4. (optional) Copy binary to `/usr/local/bin`:
@@ -76,7 +76,55 @@ Standalone installation is the recommended way to install the backend, also for 
    
 ## Docker
 
-Currently, Docker image is not available. Docker support is planned in roadmap.
+::: warning
+Docker installation is intended only for development and **not recommended for production use**, since it has limited I/O access which degrade the production performance.
+:::
+
+Official Docker image is available at [GitHub Container Registry](https://github.com/strawstacks/strawhouse/pkgs/container/strawhouse%2Fbackend).
+
+### Using Docker Compose
+
+To use Docker Compose, create `docker-compose.yml` file with the following content:
+```yaml
+services:
+strawhouse:
+  image: ghcr.io/strawstacks/strawhouse/backend:latest
+  container_name: strawhouse
+  ports:
+    - "3000:3000"
+    - "3001:3001"
+  volumes:
+    - "./data/:/opt/"
+  environment:
+    STRAWHOUSE_WEB_LISTEN: tcp,:3000
+    STRAWHOUSE_PROTO_LISTEN: tcp,:3001
+    STRAWHOUSE_DATA_ROOT: /opt/data
+    STRAWHOUSE_POGREB_PATH: /opt/pogreb
+    STRAWHOUSE_KEY: a1b2c3d4e5f6g7h8i9j0
+  restart: unless-stopped
+```
+
+Environment variables is referred from [Configuration](/backend/configuration).
+
+Then, run `docker-compose up -d` to start backend.
+
+### Using Docker CLI
+
+To use Docker CLI, run the following command:
+```shell
+docker run -d --name strawhouse \
+  -p 3000:3000 \
+  -p 3001:3001 \
+  -v $(pwd)/data:/opt/ \
+  -e STRAWHOUSE_WEB_LISTEN=tcp,:3000 \
+  -e STRAWHOUSE_PROTO_LISTEN=tcp,:3001 \
+  -e STRAWHOUSE_DATA_ROOT=/opt/data \
+  -e STRAWHOUSE_POGREB_PATH=/opt/pogreb \
+  -e STRAWHOUSE_KEY=a1b2c3d4e5f6g7h8i9j0 \
+  ghcr.io/strawstacks/strawhouse/backend:latest
+```
+
+Environment variables is referred from [Configuration](/backend/configuration).
 
 ## Homebrew
 

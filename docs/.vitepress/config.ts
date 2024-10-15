@@ -42,6 +42,26 @@ export default defineConfig({
 					},
 				],
 			},
+			{
+				text: 'Command Line',
+				link: '/command/',
+				items: [
+					{
+						text: 'Installation',
+						link: '/command/installation',
+					},
+					{
+						text: 'Command Reference',
+						link: '/command/reference',
+						items: [
+							{ text: 'Config', link: '/command/reference-config' },
+							{ text: 'Sign', link: '/command/reference-sign' },
+							{ text: 'Directory List', link: '/command/reference-directory-list' },
+							{ text: 'Feed Upload', link: '/command/reference-feed-upload' },
+						],
+					},
+				],
+			},
 		],
 		search: {
 			provider: 'local'

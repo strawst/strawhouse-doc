@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Strawhouse"
   text: "File storage redefined"
-  tagline: Bare minimal file store engine ecosystem with built-in API and signature-based access.
+  tagline: Lightweight file store engine ecosystem with built-in API and signature-based access.
   actions:
     - theme: brand
       text: Backend Deployment

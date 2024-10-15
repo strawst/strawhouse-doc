@@ -18,7 +18,7 @@ Download a file in the server
 **Example**
 
 ```sh
-curl -X GET http://localhost:3000/path/to/file.txt?t=AcEAZsEs9TDs33vy0NOz9IwacfdPyAY2aj4Q
+curl -X GET http://localhost:3000/path/to/file.txt?t=AcMAZw6af43PAkG8I39DSYL3GKQHnGbK7nWfI6lD
 ```
 
 ## Uploading a file
@@ -31,20 +31,18 @@ Upload a file to the server
 
 **Form data**
 
-| Parameter     | Type     | Description                                                 |
-|---------------|----------|-------------------------------------------------------------|
-| `file`        | `file`   | File to upload                                              |
-| `destination` | `string` | Destination path to store the file, start and end with `/`  |
-| `attribute`   | `string` | Attributes to store with the file as base64-encoded payload |
-| `token`       | `string` | Token to authenticate the request                           |
+| Parameter   | Type     | Description                                              |
+|-------------|----------|----------------------------------------------------------|
+| `token`     | `string` | Token to authenticate the request                        |
+| `directory` | `string` | Directory path to store the file, start and end with `/` |
+| `file`      | `file`   | File to upload                                           |
 
 **Example**
 
 ```sh
 curl -X POST \
-    -F "file=@/home/user/cat.png" \
+    -F "token=AcMAZw6af43PAkG8I39DSYL3GKQHnGbK7nWfI6lD" \
     -F "destination=/path/to/store/" \
-    -F "attribute=eyJ1c2VyIjoiYWRtaW4" \
-    -F "token=AcEAZsEs9TDs33vy0NOz9IwacfdPyAY2aj4Q" \
+    -F "file=@/home/user/cat.png" \
     http://localhost:3000/_/upload
 ```

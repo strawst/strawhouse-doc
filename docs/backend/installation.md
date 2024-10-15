@@ -36,7 +36,7 @@ Standalone installation is the recommended way to install the backend, also for 
 
     [Service]
     Type=simple
-    ExecStart=/usr/local/bin/strawhousebackd
+    ExecStart=/usr/local/bin/strawhousebackd --config /etc/strawhouse/backend/config.yaml
     Restart=always
 
     [Install]

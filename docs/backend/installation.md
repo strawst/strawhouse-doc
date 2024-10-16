@@ -80,7 +80,7 @@ Standalone installation is the recommended way to install the backend, also for 
 Docker installation is intended only for development and **not recommended for production use**, since it has limited I/O access which degrade the production performance.
 :::
 
-Official Docker image is available at [GitHub Container Registry](https://github.com/strawstacks/strawhouse/pkgs/container/strawhouse%2Fbackend).
+Official Docker image is available at [GitHub Container Registry](https://github.com/strawstacks/strawhouse/pkgs/container/strawhouse-backend).
 
 ### Using Docker Compose
 

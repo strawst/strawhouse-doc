@@ -6,7 +6,7 @@ Config is a command that allows you to view and modify the configuration of the 
     ```shell
     strawc config set --name key
    ```
-   > You may prompt to enter device password as the key is stored in [Keychain](https://support.apple.com/guide/keychain-access/welcome/mac).
+   > You may be prompted to enter device password as the key is stored in [Keychain](https://support.apple.com/guide/keychain-access/welcome/mac).
    
 2. Set backend address
     ```shell

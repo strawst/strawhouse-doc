@@ -25,11 +25,15 @@ import (
 )
 
 func main() {
-  key := "6AnxPZy…"
-  host := "localhost:3001"
-  st = strawhouse.New(key, host, &strawhouse.Option{
+  st, err := strawhouse.New(&strawhouse.Option{
+    Host: "6AnxPZy…",
+    Key: "localhost:3001",
     Secure: false,
   })
+  if err != nil {
+      log.Fatalf("failed to initialize strawhouse: %v", err)
+      return
+  }
     
   _ = st
 }
@@ -41,16 +45,10 @@ currently not available
 
 :::
 
-**Parameters**
-
-| Name     | Description                                     |
-|----------|-------------------------------------------------|
-| `key`    | Key specified in the backend configuration file |
-| `host`   | Hostname and port of the backend gRPC address   |
-| `option` | Additional options for the driver               |
-
 **Options**
 
-| Name     | Type   | Description                        |
-|----------|--------|------------------------------------|
-| `Secure` | `bool` | Establish gRPC connection over SSL |
+| Name     | Type     | Description                                | Example          | 
+|----------|----------|--------------------------------------------|------------------|
+| `host`   | `string` | Address of the backend proto/gRPC address  | `localhost:3001` |
+| `key`    | `string` | Key specified in the backend configuration | `6AnxPZy…`       |
+| `Secure` | `bool?`  | Establish gRPC connection over SSL         | `false`          |

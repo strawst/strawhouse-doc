@@ -88,7 +88,7 @@ To use Docker Compose, create `docker-compose.yml` file with the following conte
 ```yaml
 services:
 strawhouse:
-  image: ghcr.io/strawstacks/strawhouse/backend:latest
+  image: ghcr.io/strawstacks/strawhouse-backend:latest
   container_name: strawhouse
   ports:
     - "3000:3000"
@@ -98,8 +98,8 @@ strawhouse:
   environment:
     STRAWHOUSE_WEB_LISTEN: tcp,:3000
     STRAWHOUSE_PROTO_LISTEN: tcp,:3001
-    STRAWHOUSE_DATA_ROOT: /opt/data
-    STRAWHOUSE_POGREB_PATH: /opt/pogreb
+    STRAWHOUSE_DATA_ROOT: /opt/data/
+    STRAWHOUSE_POGREB_PATH: /opt/pogreb/
     STRAWHOUSE_KEY: a1b2c3d4e5f6g7h8i9j0
   restart: unless-stopped
 ```
@@ -118,10 +118,10 @@ docker run -d --name strawhouse \
   -v $(pwd)/data:/opt/ \
   -e STRAWHOUSE_WEB_LISTEN=tcp,:3000 \
   -e STRAWHOUSE_PROTO_LISTEN=tcp,:3001 \
-  -e STRAWHOUSE_DATA_ROOT=/opt/data \
-  -e STRAWHOUSE_POGREB_PATH=/opt/pogreb \
+  -e STRAWHOUSE_DATA_ROOT=/opt/data/ \
+  -e STRAWHOUSE_POGREB_PATH=/opt/pogreb/ \
   -e STRAWHOUSE_KEY=a1b2c3d4e5f6g7h8i9j0 \
-  ghcr.io/strawstacks/strawhouse/backend:latest
+  ghcr.io/strawstacks/strawhouse-backend:latest
 ```
 
 Environment variables is referred from [Configuration](/backend/configuration).

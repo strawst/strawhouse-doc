@@ -3,7 +3,8 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
 	title: 'Strawhouse',
-	description: 'Lightweight file store engine',
+	description: 'Strawhouse: Lightweight file store engine',
+	head: [['link', { rel: 'icon', href: 'https://static1.pixcee.dev/external/strawstacks/favicon.ico' }]],
 	themeConfig: {
 		nav: [
 			{ text: 'Home', link: '/' },

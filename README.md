@@ -1,2 +1,3 @@
 # strawhouse-doc
+
 Strawhouse documentation

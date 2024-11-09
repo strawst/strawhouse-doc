@@ -11,7 +11,7 @@ For reference, please refer to [Driver Reference](/driver/reference).
 ### Installation
 
 ```bash
-go get github.com/strawstacks/strawhouse-go
+go get github.com/strawst/strawhouse-go
 ```
 
 ## C#

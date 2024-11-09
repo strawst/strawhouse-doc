@@ -10,9 +10,9 @@ Strawhouse command line interface (CLI) can be installed using pre-built binary 
 
 ### Using pre-built binary
 
-1. Download the latest release from [GitHub Releases](https://github.com/strawstacks/strawhouse/releases) or command:
+1. Download the latest release from [GitHub Releases](https://github.com/strawst/strawhouse/releases) or command:
     ```shell
-    sudo wget -O /usr/local/bin/strawc https://github.com/strawstacks/strawhouse/releases/download/v0.1.2/strawc_darwin_amd64
+    sudo wget -O /usr/local/bin/strawc https://github.com/strawst/strawhouse/releases/download/v0.2.0/strawc_darwin_amd64
     ```
    > Please replace command with latest release version and matching architecture.
 
@@ -49,16 +49,16 @@ To build from source, you need to have [Go](https://go.dev/doc/install) installe
 
 1. Clone repository:
     ```shell
-    git clone https://github.com/strawstacks/strawhouse.git
+    git clone https://github.com/strawst/strawhouse.git
     ```
 
 2. Enter directory and checkout latest release:
     ```shell
     cd strawhouse
-    git checkout v0.1.2
+    git checkout v0.2.0
     ```
    > Please replace version with latest release version referred
-   from [GitHub Tag](https://github.com/strawstacks/strawhouse/tags)
+   from [GitHub Tag](https://github.com/strawst/strawhouse/tags)
 
 3. Build the CLI:
     ```shell

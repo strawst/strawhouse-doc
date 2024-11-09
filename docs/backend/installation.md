@@ -17,9 +17,9 @@ Standalone installation is the recommended way to install the backend, also for 
 
 ### Using pre-built binary
 
-1. Download the latest release from [GitHub Releases](https://github.com/strawstacks/strawhouse/releases) or using the following command:
+1. Download the latest release from [GitHub Releases](https://github.com/strawst/strawhouse/releases) or using the following command:
     ```shell
-    sudo wget -O /usr/local/bin/strawhousebackd https://github.com/strawstacks/strawhouse/releases/download/v0.1.0/strawhousebackd_linux_amd64
+    sudo wget -O /usr/local/bin/strawhousebackd https://github.com/strawst/strawhouse/releases/download/v0.2.0/strawhousebackd_linux_amd64
     ```
     > Please replace command with latest release version and matching architecture.
 2. Change the permission to executable:
@@ -51,15 +51,15 @@ Standalone installation is the recommended way to install the backend, also for 
 
 1. Clone repository:
     ```shell
-    git clone https://github.com/strawstacks/strawhouse.git
+    git clone https://github.com/strawst/strawhouse.git
     ```
 
 2. Enter directory and checkout latest release:
     ```shell
     cd strawhouse
-    git checkout v0.1.0
+    git checkout v0.2.0
     ```
-    > Please replace version with latest release version referred from [GitHub Releases](https://github.com/strawstacks/strawhouse/releases)
+    > Please replace version with latest release version referred from [GitHub Releases](https://github.com/strawst/strawhouse/releases)
 
 3. Build protobuf and backend:
     ```shell
@@ -80,7 +80,7 @@ Standalone installation is the recommended way to install the backend, also for 
 Docker installation is intended only for development and **not recommended for production use**, since it has limited I/O access which degrade the production performance.
 :::
 
-Official Docker image is available at [GitHub Container Registry](https://github.com/strawstacks/strawhouse/pkgs/container/strawhouse-backend).
+Official Docker image is available at [GitHub Container Registry](https://github.com/strawst/strawhouse/pkgs/container/strawhouse-backend).
 
 ### Using Docker Compose
 
